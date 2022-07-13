@@ -5,6 +5,9 @@
   font-weight: 600;
   color: #222;
 }
+.wrap{
+  background-color: #fff;
+}
 .container{
   padding: 0 20px;
 }
@@ -14,6 +17,7 @@
   width: 100%;
   position: fixed;
   z-index: 100;
+  transition: 0.5s;
 }
 .header .container{
   /* position: relative; */
@@ -30,7 +34,35 @@
   display: flex;
 }
 .main-nav li{
-  padding: 10px 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.main-nav li:hover:nth-child(1){
+  background-color: #d5d3c7;
+}
+.main-nav li:hover:nth-child(2){
+  background-color: #9f9b8c;;
+}
+.main-nav li:hover:nth-child(3){
+  background-color: #aaa;
+}
+.main-nav li:hover:nth-child(4){
+  background-color: #898c9c;
+}
+.main-nav li:hover:nth-child(5){
+  background-color: #b4bdb9;
+}
+.main-nav li:hover:nth-child(6){
+  background-color: #aaa;
+}
+.main-nav li:hover:nth-child(7){
+  background-color: #aaa;
+}
+.main-nav li:last-child span{
+  display: none;
+}
+.main-nav li:hover:last-child span{
+  display: inline-block;
 }
 .r-nav{
   position: absolute;
@@ -41,6 +73,28 @@
 .sec-slider .container{
   padding: 0;
 }
+/* Header active */
+.header.active{
+  height: 70px;
+  background-color: #fff;
+}
+.header.active .container{
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: end;
+}
+.header.active .nav{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.header.active .r-nav li{
+  display: none;
+}
+.header.active .r-nav li:first-child{
+  display: block;
+  margin-top: 15px;
+}
 
 /* slider */
 .slide{
@@ -50,6 +104,9 @@
 }
 
 /* tab */
+.sec-tab{
+  margin-bottom: 40px;
+}
 .tab-heading{
   padding: 0 20px;
   display: flex;
@@ -70,6 +127,9 @@
   display: flex;
   align-items: center;
 }
+.tab-nav li.active{
+  color: #aaa;
+}
 .tab-nav li{
   margin-right: 60px;
   font-size: 20px;
@@ -81,8 +141,11 @@
 
 /* tab-contents */
 .tab-contents{
-  display: flex;
+  display: none;
   flex-flow: row wrap;
+}
+.tab-contents.active{
+  display: flex;
 }
 .content-list{
   position: relative;
@@ -127,4 +190,81 @@
 }
 .content-list:hover .list-txt{
   opacity: 1;
+}
+
+/* Logo play */
+.sec-logo .container{
+  padding: 0;
+  margin-bottom: 425px;
+}
+.logo-play img{
+  margin-right: 20px;
+  width: 12%;
+}
+
+/* Footer */
+.footer{
+  background-color: #222;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.logo-sns{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-sns .sns{
+  margin-bottom: 60px;
+  font-size: 50px;
+}
+.logo-sns .sns span:first-child{
+  margin-right: 10px;
+}
+address{
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.info, .footer-about{
+  margin-bottom: 60px;
+}
+.info span{
+  margin-right: 10px;
+}
+.footer-about{
+  display: flex;
+}
+.about{
+  display: flex;
+  flex-flow: column nowrap;
+  margin-right: 90px
+}
+.news-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.info-use a:first-child{
+  margin-right: 20px;
+}
+.info-use a:last-child{
+  text-decoration: underline;
+}
+.newsletter{
+  display: flex;
+  align-items: center;
+}
+.newsletter p{
+  margin-right: 10px;
+}
+.newsletter button{
+  padding: 10px;
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #fff;
 }
