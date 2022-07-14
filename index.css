@@ -198,8 +198,12 @@
   margin-bottom: 425px;
 }
 .logo-play img{
-  margin-right: 20px;
-  width: 12%;
+  margin-right: 35px;
+  margin-bottom: 50px;
+  width: 10%;
+}
+.logo-play img:last-child{
+  margin-right: 0;
 }
 
 /* Footer */
