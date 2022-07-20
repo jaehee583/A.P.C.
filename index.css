@@ -194,13 +194,26 @@
 
 /* Logo play */
 .sec-logo .container{
+  overflow: hidden;
   padding: 0;
   margin-bottom: 425px;
 }
+.logo-play{
+  display: flex;
+  flex-flow: row nowrap;
+  animation: flowing 30s linear infinite;
+  transform: translateX(0%);
+}
+@keyframes flowing {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .logo-play img{
-  margin-right: 35px;
   margin-bottom: 50px;
-  width: 10%;
 }
 .logo-play img:last-child{
   margin-right: 0;
