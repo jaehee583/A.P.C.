@@ -70,18 +70,24 @@
   right: 20px;
   text-align: right;
 }
+.m-nav{
+  display: none;
+}
 .sec-slider .container{
   padding: 0;
 }
 /* Header active */
 .header.active{
-  height: 70px;
+  height: 64px;
   background-color: #fff;
 }
 .header.active .container{
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: end;
+}
+.header.active .logo{
+  width: 170px;
 }
 .header.active .nav{
   width: 70%;
@@ -93,12 +99,11 @@
 }
 .header.active .r-nav li:first-child{
   display: block;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 /* slider */
 .slide{
-  width: 100;
   height: 100vh;
   overflow: hidden;
 }
@@ -113,12 +118,11 @@
   justify-content: space-between;
   background-color: #222;
   color: #fff;
-  font-size: 60px;
+  font-size: 50px;
 }
 .title h2 img{
-  margin-top: 15px;
-  margin-right: 15px;
-  width: 180px;
+  margin: 15px 15px 15px 0;
+  width: 150px;
 }
 .title h2 span{
   font-weight: 900;
@@ -126,6 +130,7 @@
 .tab-nav{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .tab-nav li.active{
   color: #aaa;
@@ -160,7 +165,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   transform: translateY(-500px);
   cursor: pointer;
 }
@@ -196,7 +201,7 @@
 .sec-logo .container{
   overflow: hidden;
   padding: 0;
-  margin-bottom: 425px;
+  margin-bottom: 395px;
 }
 .logo-play{
   display: flex;
@@ -230,7 +235,7 @@
   width: 100%;
 }
 .logo-sns{
-  padding: 20px 0;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -284,4 +289,153 @@ address{
   color: #fff;
   background-color: #222;
   border: 1px solid #fff;
+}
+
+@media (max-width: 1200px) {
+  .header.active{
+    height: 60px;
+  }
+  .header.active .logo{
+    width: 150px;
+  }
+  .main-nav, .r-nav{
+    display: none;
+  }
+  .m-nav{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+  }
+  .m-nav li{
+    margin-right: 30px;
+  }
+  .m-nav li:last-child{
+    margin-right: 0;
+  }
+  /* content */
+  .content-list{
+    width: 25%;
+  }
+  .sec-logo .container{
+    margin-bottom: 380px;
+  }
+  .logo-play img{
+    width: 125%;
+  }
+  /* footer */
+  .info, .footer-about{
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 935px) {
+  /* content */
+  .content-list .list-tit{
+    font-size: 40px;
+  }
+  .sec-logo .container{
+    margin-bottom: 405px;
+  }
+  /* footer */
+  .footer .logo img{
+    width: 80%;
+  }
+  .logo-sns .sns{
+    font-size: 42px;
+  }
+  .news-info{
+    display: block;
+  }
+  .newsletter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .info, .footer-about{
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header */
+  .header{
+    height: 60px;
+    background-color: #fff;
+  }
+  .header .container{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .header .logo{
+    width: 150px;
+  }
+  .header .nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .slide{
+    height: 400px;
+  }
+  /* content */
+  .title h2 img,
+  .title h2 span{
+    display: none;
+  }
+  .tab-nav{
+    margin: 0 auto;
+  }
+  .tab-nav li{
+    padding: 20px;
+  }
+  .content-list{
+    width: 33.3333%;
+  }
+  .content-list .list-tit{
+    font-size: 34px;
+  }
+  .logo-play img{
+    width: 180%;
+  }
+  .sec-logo .container{
+    margin-bottom: 340px;
+  }
+  /* footer */
+  .logo-sns .logo{
+    width: 130px;
+  }
+  .logo-sns .sns{
+    margin-top: 7px;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .info{
+    font-size: 11px;
+  }
+  .about{
+    margin-right: 20px;
+    font-size: 13px;
+  }
+  .info, .footer-about{
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 510px) {
+  .tab-nav li{
+    margin: 0;
+  }
+  .content-list .list-tit{
+    font-size: 24px;
+  }
+  .sec-logo .container{
+    margin-bottom: 370px;
+  }
+  .logo-play img{
+    width: 210%;
+    margin-bottom: 25px;
+  }
 }
