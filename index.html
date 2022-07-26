@@ -68,7 +68,31 @@
           <ul class="m-nav">
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            <li class="sub-btn"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+          </ul>
+          <ul class="sub-nav">
+            <div class="sub-nav-top">
+              <div class="logo">
+                <a href="#"><img src="./images/logo.png" alt="브랜드 로고"></a>
+              </div>
+              <div class="close-btn">
+                <a href="#"><i class="fa-solid fa-xmark"></i></a>
+              </div>
+            </div>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Denim</a></li>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Surplus</a></li>
+            <li><a href="#">A.P.C. Lacoste</a></li>
+            <div class="sub-nav-bottom">
+              <li><a href="#">내계정/로그인</a></li>
+              <li><a href="#">South Korea</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li><a href="#">아이디룩몰</a></li>
+            </div>
           </ul>
         </nav>
       </div>
@@ -338,6 +362,13 @@
       } else {
         $('header').removeClass('active')
       }
+    })
+    // sub-nav
+    $('.sub-btn').click(function () {
+      $('.sub-nav').toggleClass('active')
+    })
+    $('.close-btn').click(function () {
+      $('.sub-nav').toggleClass('active')
     })
 
     // Tab
